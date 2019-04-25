@@ -1,13 +1,35 @@
+* { 
+    box-sizing: border-box;
+}
+
+
 li a {
     color: lightslategray;
 }
 
 body {
-    background-image: url("images/Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ the\ Copy\ of\ Project\ -\ Drawing\ 2660134128.png");
-   
+    background-color: black;
+    background-size: cover;
+    background-image: url(../polls/images/Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ Copy\ of\ the\ Copy\ of\ Project\ -\ Drawing\ 2660134128.png)
 }
 
 ul {
     position: relative;
     padding: 50px;
+}
+
+
+
+/* Styles for larger screens */
+@media screen and (min-width: 720px) {
+  
+    .flex {
+        display: flex;
+        max-width: 1200px;
+        flex-direction: column;
+        margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+  }
 }
