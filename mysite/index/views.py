@@ -9,4 +9,4 @@ from django.views import generic
 class IndexView(generic.ListView):
     template_name = 'index/index.html'
     def get_queryset(self):
-        
+        return render(request, 'index/index.html'),
