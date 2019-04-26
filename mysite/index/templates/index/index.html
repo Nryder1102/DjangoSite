@@ -1,9 +1,81 @@
 <!doctype html>
-<html>
-<head>
+<html lang="en">
 
-</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'index/styles2.css' %}">
+
 <body>
+<div class="main-nav">
+        <ul class="nav">
+          <li class="name">Django WebApp</li>
+          <li><a href="{% url 'index:index' %}">Home</a></li>
+          <li><a href="{% url 'polls:index' %}">Polls</a></li>
+        </ul>
+</div>
 
+<main class="flex">
+      <div class="card">
+ <h2>Welcome!</h2>
+          <p>This is my Django WebApp home page!</p>
+          <div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'Site')" id="defaultOpen">About This Site</button>
+ <button class="tablinks" onclick="openTab(event, 'Me')">About Me</button>
+  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact Me</button>
+
+</div>
+ {% comment %} <div id="Experience" class="tabcontent cardTab" style="display: block;">
+        <h2>Experience</h2>
+        <p>Some of my past knowledge and skills include:</p>
+        <ul class="skills">
+          <li>Basic HTML</li>
+          <li>Basic Java</li>
+          <li>Basic Bash</li>
+          <li>Bash Shell</li>
+        </ul>
+      </div> 
+       
+<div id="Hobbies" class="tabcontent cardTab" style="display: none;">
+         <h2>Hobbies</h2>
+    <p>Some activities I like to do when I have free time:</p>
+    <ul class="skills">
+    <li>Read</li>
+        <li><a href="myphotos.html">Draw/Edit photos</a></li>
+        <li><a href="mygames.html">Play Video Games</a></li>
+    <li>Mess around with Computers</li>
+    </ul>
+</div>
+
+<div id="Misc." class="tabcontent cardTab" style="display: none;">
+  <h2>Miscellaneous</h2>
+</div> {% endcomment %}
+</div>
+
+     
+
+    </main>
+    <script>
+    function openTab(evt, categoryName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(categoryName).style.display = "block";
+    evt.currentTarget.className += " active";
+} 
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+    </script>
 </body>
 </html>
