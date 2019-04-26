@@ -26,3 +26,4 @@ urlpatterns = [
     path('index/', include('index.urls')),
     path('', RedirectView.as_view(url='/index/', permanent=True)),
 ]
+
